@@ -66,7 +66,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
         contents: messages,
-        generationConfig: { temperature: 0.7, maxOutputTokens: 800 },
+        generationConfig: { temperature: 0.7, maxOutputTokens: 1500, thinkingConfig: { thinkingLevel: "low" } },
       }),
     });
 
